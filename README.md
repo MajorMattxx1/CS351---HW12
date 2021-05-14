@@ -3,8 +3,6 @@ Matthew Stanford
 
 NetID: gd9687
 
-Note: this is being turned in late, but the due date was extended to Friday, and a lot of this is based on given content from the last lecture, or the posted solution.
-
 ## Question 1
 ### 1a.
 Made the App class
