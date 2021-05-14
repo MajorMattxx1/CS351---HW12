@@ -1,0 +1,14 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Bundler related directories
+.cache
+dist
+
+# Dependency directories
+node_modules
+
+#1.c.
+/clubSSG/build/*.html

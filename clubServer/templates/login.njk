@@ -1,0 +1,45 @@
+{% extends "clubBase.njk" %}
+
+{% block head %}
+        <style>
+            .loginMessage {
+            text-align: center;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            border: 10px solid black;
+            }
+        </style>
+{% endblock %}    
+
+{% block main %}
+            <h1>Fremont Cheese Sniffers</h1>
+            <div id="messsage"></div>
+            <form id="Login" method="post" action="./loginConfirm">
+                <label for="username">Username </label> 
+                <input type="text" name="username" id="username" required>
+                <label for="password">Password </label> 
+                <input type="password" name="password" id="password" required>
+                <button name= "Login Button" id="loginButton">Login</button>
+            </form>
+{% endblock %}
+
+{% block script %}
+            document.getElementById("loginButton").addEventListener("click", myFunction)
+                                                                  
+            function myFunction() {
+                var para1 = document.createElement("P");
+                var para2 = document.createElement("P");
+                var usernameInput = document.getElementById("username").value;
+                
+                para1.innerHTML = "Welcome " + usernameInput;
+                document.getElementById("messsage").appendChild(para1);
+                
+                para2.innerHTML = "This site is under construction";
+                document.getElementById("messsage").appendChild(para2);
+                
+                document.getElementById("messsage").classList.add("loginMessage");
+                
+                document.getElementById("loginButton").removeEventListener("click", myFunction)
+            }
+{% endblock %}

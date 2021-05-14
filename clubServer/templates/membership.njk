@@ -1,0 +1,27 @@
+{% extends "clubBase.njk" %}
+ 
+
+{% block main %}
+                        <h1>APPLY NOOOOWWWW</h1>
+            <form id="Application" method="post" action="./membershipSignup">
+                <label>name </label> 
+                <input type="text" name="name" id="name" required="required">
+    
+                <label>email</label> 
+                <input type="email" name="email" id="email" required="required">
+
+                <label>Password </label> 
+                <input type="password" name="password" id="password" minlength="6" maxlength="32" required="required">
+        
+            <label for="Toughest Cheese">Choose toughest cheese you've sniffed:</label>
+            <select name="toughestCheese" id="toughestCheese"> Toughest Cheese:
+                <option value="American Cheese">American Cheese</option>
+                <option value="Gouda">Gouda</option>
+                <option value="Goat Cheese">Goat Cheese</option>
+                <option value="Blue Cheese">Blue Cheese</option>
+            </select>
+            
+            <input type="submit" value="Submit">  
+            </form>
+            <section id="ThanksDialog"></section>
+{% endblock %}

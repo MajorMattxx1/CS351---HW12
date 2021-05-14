@@ -1,0 +1,15 @@
+{% extends "clubBase.njk" %}
+
+  
+
+{% block main %}
+            <h1>Activity</h1>
+            <div id="messsage"></div>
+            <form id="Login" method="get" action="./addActivitySubmit">
+                <label for="name">Name </label> 
+                <input type="text" name="name" id="name" required>
+                <label for="dates">Dates </label> 
+                <input type="text" name="dates" id="dates" required>
+                <button name= "Add Activity" id="addActivity">Add Activity</button>
+            </form>
+{% endblock %}

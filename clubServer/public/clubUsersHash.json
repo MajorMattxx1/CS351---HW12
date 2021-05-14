@@ -1,0 +1,14 @@
+[
+  {
+    "name": "hgfjdhj",
+    "email": "sdfgsdfg@sdfgasdf",
+    "password": "$2a$10$gziFGDtNRepmuj7dJHZK3e00qvx6fPDk8gj1hcgg9z2ZvB/09Qdla",
+    "cheese": "American Cheese"
+  },
+  {
+    "name": "test",
+    "email": "test@test",
+    "password": "$2a$10$MgpwOXHtoPVfPiaN4UD/zuC7AcWHHfIzBQ2lP9hMJcZUixTgL.czO",
+    "cheese": "Goat Cheese"
+  }
+]

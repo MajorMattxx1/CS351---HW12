@@ -1,0 +1,24 @@
+{% extends "clubBase.njk" %}
+   
+
+{% block main %}
+             <h1>Fremont Cheese Sniffers</h1>
+             <h2>Members</h2>
+             
+             <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Cheese</th>
+                </tr>
+                {% for members in members %}
+                <tr>
+                    <th>{{ members.name }}</th>
+                    <th>{{ members.email }}</th>
+                    <th>{{ members.cheese }}</th>
+                </tr> 
+
+
+                {% endfor %}
+            </table>
+{% endblock %}

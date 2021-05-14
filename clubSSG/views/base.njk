@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <author>{{author}}</author>
+        <description>{{description}}</description>
+    </head>
+    <body>
+    <header>     
+        <nav>
+            <% include file = "nav.html" %> 
+        </nav>
+    </header>
+    <main>
+        {{mainContent | safe}}
+    </main>
+    </body>
+</html>

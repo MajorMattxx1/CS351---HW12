@@ -1,0 +1,34 @@
+{% extends "clubBase.njk" %}
+   
+
+{% block main %}
+             <h1>Fremont Cheese Sniffers</h1>
+            <img src="./images/CheeseSniff.jpg" alt="CheeseSniff">
+            <h2> Club Activities</h2>
+            <h3>Types of Cheese to Sniff</h3>
+                <ul>
+                    <li>&#129472 Cheddar</li>
+                    <li>&#129472 Parmesan</li>
+                    <li>&#129472 Mozzarella</li>
+                </ul>
+            <h3> Advanced Cheeses to sniff</h3>
+                <ul>
+                    <li>&#128556 Blue Cheese</li>
+                    <li>&#128556 Goat Cheese</li>
+                    <li>&#128556 Bleu Cheese</li>
+                </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+                {% for activities in activities %}
+                <tr>
+                    <th>{{ activities.name }}</th>
+                    <th>{{ activities.dates }}</th>
+                </tr> 
+                
+                
+                {% endfor %}
+            </table>
+{% endblock %}

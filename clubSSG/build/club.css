@@ -1,0 +1,108 @@
+        <style>
+            html {
+                font-family: "fonty", "Georgia", serif;
+                }
+            /*Note: that html segment isn't actually changing the font, but without it, h1 is not text aligned. Eventually need to figure out what's going on.*/
+            h1 {
+                text-align: center;
+                }
+            a:active {
+                  background-color: darkorange;
+                  color: black;
+                }
+            .siteLinks{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                
+                font-family: "fonty", "Georgia", serif;
+                
+                background-color: cornflowerblue;
+                                
+                padding: 1px;
+                border: 5px solid gray;
+                position: fixed;
+                top: 0px;
+                width: 100vw;
+                margin: auto;
+            }
+            .siteLinks li{
+                float: left;
+                display: block;
+                text-align: center;
+                padding: 14px 16px;
+
+                list-style-type: none;
+                text-decoration: none;
+                
+            }
+            main {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                
+                font-family: "fonty", "Georgia", serif;
+                background-color: chocolate;
+                margin: 40px;
+                top: 40px;
+                
+            }
+            body {
+                font-family: "fonty", "Georgia", serif;
+                background-color: dimgray;
+                top: 200px
+            }
+            footer {
+                text-align: center;
+                font-size: 10px;
+            }
+           
+            table,
+            td {
+                border: 1px solid #333;
+                width 50%;
+            }
+
+            thead,
+            tfoot {
+                text-align: center;
+                color: solid #333;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #808080;
+            }
+
+            input:required:invalid {
+                border-color: #c00000;
+                background-color: red;
+            }
+
+            input:required:valid {
+                border-color: green;
+                background-color: green;
+            }
+            
+
+            .thanksDialog {
+                height: 0px;
+                margin-left:: -69px;
+            }
+
+            .show {
+            height: 250px;
+            margin-left:: 20px;
+            background-color: white;
+            font-size: 25px;
+            border: 10px solid black;
+            }
+
+            .gridy {
+                display: grid;
+                grid-template-areas: auto;
+                    
+                grid-gap: 10px;
+            }
+        </style>

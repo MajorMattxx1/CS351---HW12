@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block metaStuff %}
+        <title>Fremont Cheese Sniffers</title>
+        {% endblock %}
+        <link href="club.css" rel="stylesheet">
+    </head>
+    
+    <body>
+    {% if userRole == 'guest' %} {% include "navGuest.njk" %} {% endif %}
+    {% if userRole == 'member' %} {% include "navMember.njk" %} {% endif %}
+    {% if userRole == 'admin' %} {% include "navAdmin.njk" %} {% endif %}
+    {% block header %}{% endblock %}
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2021 Fremont Cheese Sniffers</p>
+    </footer>
+    </body>
+</html>

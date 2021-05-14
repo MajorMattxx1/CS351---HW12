@@ -1,0 +1,65 @@
+<!--copied and modified from https://www.grotto-networking.com/WebsiteDevelopment/files/lectures/HTML1/HTML1.html#/html-5-document-outline -->
+
+<!DOCTYPE html>
+<html lang="en"> <!-- English -->
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="club.css">
+        <style>
+            .loginMessage {
+            text-align: center;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            border: 10px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class= "siteLinks">
+                    <li><a href="index.html">Main Page</a></li>
+                    <li class="active"><a href="loginPage.html">Login Page</a></li>
+                    <li><a href="appPage.html">Sign Up Page</a></li>
+                    <li><a href="clubActivitiesPage.html">Club Activities</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class = "gridy">
+            <h1>Fremont Cheese Sniffers</h1>
+            <div id="messsage"></div>
+            <form>
+                <label for="username">Username </label> 
+                <input type="text" name="username" id="username" required>
+            </form>
+            <form>
+                <label for="password">Password </label> 
+                <input type="password" name="password" id="password" required>
+            </form>
+            <button name= "Login Button" id="loginButton">Login</button>
+        </main>
+        <footer>
+        © 2021 Fremont Cheese Sniffers
+        </footer>
+        <script>
+            document.getElementById("loginButton").addEventListener("click", myFunction)
+                                                                  
+            function myFunction() {
+                var para1 = document.createElement("P");
+                var para2 = document.createElement("P");
+                var usernameInput = document.getElementById("username").value;
+                
+                para1.innerHTML = "Welcome " + usernameInput;
+                document.getElementById("messsage").appendChild(para1);
+                
+                para2.innerHTML = "This site is under construction";
+                document.getElementById("messsage").appendChild(para2);
+                
+                document.getElementById("messsage").classList.add("loginMessage");
+                
+                document.getElementById("loginButton").removeEventListener("click", myFunction)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+
+{% block metaStuff %}
+        <title>Server Uptime</title>
+{% endblock %}
+    
+{% block main %}
+    <h1>Server Uptime</h1>
+    <h2>Server Started: {{startDate}}</h2>
+    <h2>Server Current Time: {{curDate}}</h2>
+
+{% endblock %}

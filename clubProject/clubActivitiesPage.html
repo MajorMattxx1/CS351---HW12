@@ -1,0 +1,83 @@
+<!--copied and modified from https://www.grotto-networking.com/WebsiteDevelopment/files/lectures/HTML1/HTML1.html#/html-5-document-outline -->
+
+<!DOCTYPE html>
+<html lang="en"> <!-- English -->
+    <head>
+        <title>Club Activities</title>
+        <link rel="stylesheet" href="club.css">
+        <script src="eventData.js"></script>
+    </head>
+    <body> 
+        <header>
+            <nav>
+                <ul class= "siteLinks">
+                    <li><a href="index.html">Main Page</a></li>
+                    <li><a href="loginPage.html">Login Page</a></li>
+                    <li><a href="appPage.html">Sign Up Page</a></li>
+                    <li class="active"><a href="clubActivitiesPage.html">Club Activities</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Fremont Cheese Sniffers</h1>
+            <img src="images/CheeseSniff.jpg" alt="CheeseSniff">
+            <h2> Club Activities</h2>
+            <h3>Types of Cheese to Sniff</h3>
+                <ul>
+                    <li>&#129472 Cheddar</li>
+                    <li>&#129472 Parmesan</li>
+                    <li>&#129472 Mozzarella</li>
+                </ul>
+            <h3> Advanced Cheeses to sniff</h3>
+                <ul>
+                    <li>&#128556 Blue Cheese</li>
+                    <li>&#128556 Goat Cheese</li>
+                    <li>&#128556 Bleu Cheese</li>
+                </ul>
+            <!--
+            <table>
+                    <caption>Weekly Activities</caption>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Personal Cheese Sniffing</td>
+                    <td>Anytime</td>
+                    <td>Sniff your own cheese whenever you want, and tell us about it later.</td>
+                </tr>
+                <tr>
+                    <td>Communal Cheese Sniffing</td>
+                    <td>Cheeseurday at Sniff o'clock</td>
+                    <td>Every week we get a big wheel of cheese, gather around, and sniff hard.</td>
+                </tr>
+                <tr>
+                    <td>Advanced Communal Cheese Sniffing</td>
+                    <td>Meltsday at Gouda o'clock</td>
+                    <td>Just like with Communal Cheese Sniffing, but, beware that these cheeses are not for the weak of nose. </td>
+                </tr>
+            </table>
+            -->
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+                <tbody id="tableau"></tbody>         
+            </table>
+            
+            <script>
+                let tbody = document.getElementById("tableau"); 
+                events.forEach(function(event) { 
+                    let tr = document.createElement("tr"); 
+                    let content = `<td>${event.name}</td><td>${event.dates}</td>`; // You can do this! 
+                    tr.innerHTML = content; tbody.appendChild(tr); 
+                    })            
+            </script>
+        </main>
+        <footer>
+        © 2021 Fremont Cheese Sniffers
+        </footer>
+    </body>
+</html>
